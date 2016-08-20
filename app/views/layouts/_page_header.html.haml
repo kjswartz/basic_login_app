@@ -1,0 +1,18 @@
+%header#page-header
+  .container
+    .row
+      .col-md-4.logo
+        = link_to root_path do
+          = image_tag 'rails.png', alt: 'Rails App'
+      .col-md-4
+        &nbsp;
+      .col-md-4.authentication
+        - if user_signed_in?
+          = current_user.email
+          &ndash;
+          = link_to 'Logout', destroy_user_session_path, method: :delete
+        - else
+          = link_to 'Login', new_user_session_path, class: ['authentication-link']
+    .flash.row
+      = flash_messages
+
