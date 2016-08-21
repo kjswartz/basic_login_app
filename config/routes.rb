@@ -10,10 +10,10 @@ Rails.application.routes.draw do
     # resources :registrations, only: [:create, :update]
     # post :forgot_password, to: 'registrations#forgot_password'
     #
-    # namespace :users do
-    #   post :sessions, to: 'sessions#create'
-    #   delete :sessions, to: 'sessions#destroy'
-    # end
+    namespace :users do
+      post :sessions, to: 'sessions#create'
+      delete :sessions, to: 'sessions#destroy'
+    end
   end
   #############################################################################
 
