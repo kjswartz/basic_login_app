@@ -7,6 +7,7 @@ gem 'rails', '~> 5.0.0', '>= 5.0.0.1'
 gem 'pg'                      # Database
 gem 'puma', '~> 3.0'          # Use Puma as the app server
 gem 'redis', '~> 3.0'         # Key value store
+gem 'jwt'                     # Token Auth
 
 ###############################################################################
 # General
